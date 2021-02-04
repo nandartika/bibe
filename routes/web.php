@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('edit-data', 'AuthorizationController@editData');
 // Route::get('update-data', 'AuthorizationController@updateData');
 // Route::get('delete-data', 'AuthorizationController@deleteData');
-Route::get("/","MenuController@index");
+Route::get("/", "MenuController@index");
 Route::get('/color', function () {
     return view('colors');
 });
@@ -33,3 +33,6 @@ Route::get('/chart', function () {
 // Auth::routes();
 
 // Route::get('/', 'HomeController@index');
+
+Route::get("/inventory", "InventoryController@index");
+Route::get("/inventory/create", "InventoryController@create");

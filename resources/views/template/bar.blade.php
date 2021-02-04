@@ -36,7 +36,7 @@
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Main styles for this application-->
-    <link href="dist/css/style.css" rel="stylesheet">
+    <link href="{{ asset('dist/css/style.css') }}" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
@@ -77,7 +77,7 @@
                         <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-fastfood"></use>
                     </svg> Menu<span class="badge badge-info"></span></a>
             </li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/inventory">
                     <svg class="c-sidebar-nav-icon">
                         <use xlink:href="node_modules/@coreui/icons/sprites/free.svg#cil-storage"></use>
                     </svg> Inventory<span class="badge badge-info"></span></a>
@@ -105,14 +105,15 @@
         <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent"
             data-class="c-sidebar-minimized"></button>
     </div>
+
     @yield("content")
 
-
+    @yield('aside')
 
     <!-- CoreUI and necessary plugins-->
-    <script src="dist/vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="{{ asset('dist/vendors/@coreui/coreui/js/coreui.bundle.min.js') }}"></script>
     <!--[if IE]><!-->
-    <script src="dist/vendors/@coreui/icons/js/svgxuse.min.js"></script>
+    <script src="{{ asset('dist/vendors/@coreui/icons/js/svgxuse.min.js') }}"></script>
     <!--<![endif]-->
 
 

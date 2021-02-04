@@ -31,12 +31,12 @@
 
 .top {
     background-color: white;
-    margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    position: relative !important;
+    margin: 0px !important;
     width: 1293px;
     max-width: 100% !important;
-    position: fixed !important;
-    margin-top: 57px !important;
-    z-index: 2;
 }
 
 .card {
@@ -90,13 +90,13 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.menu-info>div {
+.menu-info > div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menu-info>div:nth-child(1) {
+.menu-info > div:nth-child(1) {
     font-size: 20px;
     font-weight: bold;
 }
@@ -106,7 +106,7 @@
     flex-direction: column-reverse;
 }
 
-.menu-infos>p {
+.menu-infos > p {
     margin-left: auto !important;
     margin-right: 5px !important;
 }
